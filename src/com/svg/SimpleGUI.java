@@ -1,16 +1,17 @@
 package com.svg;
 
-
-import javax.sound.midi.Soundbank;
-import javax.sound.sampled.Clip;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
-import java.applet.Applet;
-import java.applet.AudioClip;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.IOException;
 
 
 public class SimpleGUI extends JFrame {
@@ -18,16 +19,19 @@ public class SimpleGUI extends JFrame {
     //Переменные отвечающие за Минуты и Миллисекунды
     int minutes, TimeforMili;
 
-    //Создание Обьектов Класса Jfield
+    //Создание Обьектов Класса Jframe
     JPanel panel = new JPanel();
     JTextField input = new JTextField(2);
+
+    public static Audio ticking;
+    public static Audio beep;
 
 
     private JLabel label = new JLabel("Выберете время(В минутах) и поставьте таймер");
     //   FIXME
 
     //Создание Графического Интерфейса
-    SimpleGUI(){
+    SimpleGUI() {
         super();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setBounds(200,200,200,200);
@@ -37,6 +41,10 @@ public class SimpleGUI extends JFrame {
        panel.add(input);
        setContentPane(panel);
        setSize(350,100);
+
+       ticking = new Audio("/res/tick.wav",0.70);
+       beep = new Audio("/res/beep.wav",0.70);
+
 
        //Слушатель нажания в TextField
         input.addActionListener(new ActionListener() {
@@ -50,6 +58,8 @@ public class SimpleGUI extends JFrame {
                minutes = (Integer.parseInt(s));
                int inMilliseconds = 60000;
                System.out.println(minutes);
+               beep.sound();
+               beep.setVolume();
 
                //Преобразование из минут в миллисекунды
                TimeforMili = minutes * inMilliseconds;
@@ -62,6 +72,8 @@ public class SimpleGUI extends JFrame {
                    @Override
                    public void actionPerformed(ActionEvent e) {
                        System.out.println("Время закончилось");
+                       beep.sound();
+                       beep.setVolume();
 
                    }
                });

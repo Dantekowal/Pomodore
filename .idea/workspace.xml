@@ -27,8 +27,20 @@
       <file leaf-file-name="SimpleGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/svg/SimpleGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-763">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            <state relative-caret-position="118">
+              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Audio.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/svg/Audio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,6 +67,7 @@
         <option value="$PROJECT_DIR$/src/com/svg/Soundtracks.java" />
         <option value="$PROJECT_DIR$/src/com/svg/Sound.java" />
         <option value="$PROJECT_DIR$/src/com/svg/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/svg/Audio.java" />
         <option value="$PROJECT_DIR$/src/com/svg/SimpleGUI.java" />
       </list>
     </option>
@@ -81,7 +94,7 @@
             <path>
               <item name="Pomodore" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pomodore" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pomodore" type="b2602c69:ProjectViewProjectNode" />
@@ -114,6 +127,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\Pomodore\res" />
       <recent name="D:\IdeaProjects\Pomodore\src\Resourse" />
     </key>
   </component>
@@ -156,10 +170,10 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32857144" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" visible="true" weight="0.32857144" />
       <window_info id="Learn" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32857144" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.32857144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -292,6 +306,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="970" selection-start-line="970" selection-end-line="970" />
+          <folding>
+            <element signature="e#32388#32389#0" expanded="true" />
+            <element signature="e#32443#32444#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -336,10 +354,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/svg/Sound.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/svg/Audio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/svg/SimpleGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-763">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="118">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -363,7 +391,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
