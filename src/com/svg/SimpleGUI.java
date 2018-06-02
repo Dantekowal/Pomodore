@@ -5,6 +5,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 
 public class SimpleGUI extends JFrame {
 
@@ -12,6 +15,7 @@ public class SimpleGUI extends JFrame {
     int minutes, TimeforMili;
 
     //Создание Обьектов Класса Jfield
+    JPanel panel = new JPanel();
     JTextField input = new JTextField(2);
     private JLabel label = new JLabel("Выберете время(В минутах) и поставьте таймер");
 // FIXME
@@ -22,7 +26,6 @@ public class SimpleGUI extends JFrame {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setBounds(200,200,200,200);
         this.setVisible(true);
-       JPanel panel = new JPanel();
        panel.setLayout(new FlowLayout());
        panel.add(label);
        panel.add(input);
@@ -63,8 +66,26 @@ public class SimpleGUI extends JFrame {
         JDialog dialog = new JDialog();
         JLabel alert = new JLabel("Таймер включен на "+ minutes + " min");
         dialog.setLayout(new FlowLayout());
+        dialog.setBounds(200, 70, 200 ,70);
+        dialog.setLocationRelativeTo(panel);
         dialog.add(alert);
         dialog.setVisible(true);
+        dialog.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                dialog.dispose();
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
     }
 
     public static void main(String[] args) {
