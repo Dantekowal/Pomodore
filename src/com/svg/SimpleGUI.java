@@ -1,7 +1,11 @@
 package com.svg;
 
 
+import javax.sound.midi.Soundbank;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
+import java.applet.Applet;
+import java.applet.AudioClip;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,8 +21,10 @@ public class SimpleGUI extends JFrame {
     //Создание Обьектов Класса Jfield
     JPanel panel = new JPanel();
     JTextField input = new JTextField(2);
+
+
     private JLabel label = new JLabel("Выберете время(В минутах) и поставьте таймер");
-// FIXME
+    //   FIXME
 
     //Создание Графического Интерфейса
     SimpleGUI(){
@@ -37,6 +43,7 @@ public class SimpleGUI extends JFrame {
            @Override
            public void actionPerformed(ActionEvent e) {
                //Получение текста из TextField
+
                String s = input.getText();
 
                //Преобразование из String в int
@@ -49,12 +56,13 @@ public class SimpleGUI extends JFrame {
 
                //Вызов AlertDialog
                AlertDialog();
-
+               //   FIXME
                //Включение таймера где TimeforMili переменная для отсчета
                Timer timer = new Timer(TimeforMili, new ActionListener() {
                    @Override
                    public void actionPerformed(ActionEvent e) {
                        System.out.println("Время закончилось");
+
                    }
                });
                timer.start();
@@ -73,21 +81,17 @@ public class SimpleGUI extends JFrame {
         dialog.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-
             }
-
+            //закрытие диалога нажатием любой клавищи
             @Override
             public void keyPressed(KeyEvent e) {
                 dialog.dispose();
             }
-
             @Override
             public void keyReleased(KeyEvent e) {
-
             }
         });
     }
-
     public static void main(String[] args) {
         SimpleGUI app = new SimpleGUI();
     }
