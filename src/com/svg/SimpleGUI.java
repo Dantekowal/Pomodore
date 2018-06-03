@@ -42,8 +42,8 @@ public class SimpleGUI extends JFrame {
        setContentPane(panel);
        setSize(350,100);
 
-       ticking = new Audio("/res/tick.wav",0.70);
-       beep = new Audio("/res/beep.wav",0.70);
+       ticking = new Audio("res/tick.wav",0.70);
+       beep = new Audio("res/beep.wav",0.99);
 
 
        //Слушатель нажания в TextField
@@ -58,8 +58,9 @@ public class SimpleGUI extends JFrame {
                minutes = (Integer.parseInt(s));
                int inMilliseconds = 60000;
                System.out.println(minutes);
-               beep.sound();
-               beep.setVolume();
+
+               ticking.sound();
+               ticking.setVolume();
 
                //Преобразование из минут в миллисекунды
                TimeforMili = minutes * inMilliseconds;
@@ -71,13 +72,17 @@ public class SimpleGUI extends JFrame {
                Timer timer = new Timer(TimeforMili, new ActionListener() {
                    @Override
                    public void actionPerformed(ActionEvent e) {
-                       System.out.println("Время закончилось");
+                       System.out.println("Время закончилось1");
                        beep.sound();
                        beep.setVolume();
+
 
                    }
                });
                timer.start();
+               if (){
+
+               }
            }
        });
     }
