@@ -26,9 +26,7 @@ public class SimpleGUI extends JFrame {
     public static Audio ticking;
     public static Audio beep;
 
-
     private JLabel label = new JLabel("Выберете время(В минутах) и поставьте таймер");
-    //   FIXME
 
     //Создание Графического Интерфейса
     SimpleGUI() {
@@ -42,16 +40,12 @@ public class SimpleGUI extends JFrame {
        setContentPane(panel);
        setSize(350,100);
 
-       ticking = new Audio("res/tick.wav",0.70);
-       beep = new Audio("res/beep.wav",0.99);
-
 
        //Слушатель нажания в TextField
         input.addActionListener(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
                //Получение текста из TextField
-
                String s = input.getText();
 
                //Преобразование из String в int
@@ -59,30 +53,30 @@ public class SimpleGUI extends JFrame {
                int inMilliseconds = 60000;
                System.out.println(minutes);
 
-               ticking.sound();
-               ticking.setVolume();
-
                //Преобразование из минут в миллисекунды
                TimeforMili = minutes * inMilliseconds;
+               //Инициализация и загрузка аудиофайлов и передача им громкости(wt) и колличесто повторений
+               ticking = new Audio("res/tick.wav",0.70,minutes);
+               beep = new Audio("res/beep.wav",0.99,1);
 
                //Вызов AlertDialog
                AlertDialog();
-               //   FIXME
+
+               //воспроизведение аудиофайла и передача ему громкости
+//               ticking.sound();
+//               ticking.setVolume();
+//               ticking.repeat();
+               // FIXME
                //Включение таймера где TimeforMili переменная для отсчета
                Timer timer = new Timer(TimeforMili, new ActionListener() {
                    @Override
                    public void actionPerformed(ActionEvent e) {
-                       System.out.println("Время закончилось1");
+                       System.out.println("Время закончилось!");
                        beep.sound();
                        beep.setVolume();
-
-
                    }
                });
                timer.start();
-               if (){
-
-               }
            }
        });
     }
